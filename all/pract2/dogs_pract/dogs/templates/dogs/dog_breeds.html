@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Собаки - DogAPI{% endblock %}
+
+{% block content %}
+<h2>Список пород:</h2>
+<ol>
+    {% for breed in breeds %}
+        <li>{{ breed }}</li>
+    {% endfor %}
+</ol>
+<form method="post">
+    {% csrf_token %}
+    <label>Введите породы через запятую:</label>
+    <input type="text" name="breeds" value="{{ ', '.join(selected_breeds) }}">
+    <button type="submit">Показать фото</button>
+</form>
+
+{% if images %}
+    <h3>Фото выбранных пород:</h3>
+    <ul>
+    {% for breed, img_url in images.items %}
+        <li>
+            <strong>{{ breed }}</strong><br>
+            {% if img_url %}
+                <img src="{{ img_url }}" alt="{{ breed }}" style="max-width:200px;">
+            {% else %}
+                Нет фото для этой породы.
+            {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+{% endif %}
+{% endblock %}

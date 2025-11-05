@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Все посты - BlogSite{% endblock %}
+
+{% block content %}
+<h2>Последние посты</h2>
+{% for post in posts %}
+<article class="post">
+    <h3>{{ post.title|title }}</h3>
+    <p class="date">Опубликовано: {{ post.published_date|date:"d E Y" }}</p>
+    <p>{{ post.content|truncatechars:150 }}</p>
+    <p>Автор: {{ post.author|lower }}</p>
+</article>
+{% empty %}
+<p>Пока нет постов.</p>
+{% endfor %}
+{% endblock %}
