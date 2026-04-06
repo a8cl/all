@@ -31,4 +31,4 @@
 | Суббота       | 1 Лекция                    | 8:30      |
 | Воскресенье   | 👻                         | -         |
 
-![Логотип]([https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png](https://avatars.mds.yandex.net/i?id=8f2dfe7991319b0f19dd4eddc1f9c4949bd7ff93-3921274-images-thumbs&n=13))
+![Логотип](https://i.pinimg.com/originals/b7/e1/1e/b7e11eeae770c0048a9156fcef6801c7.jpg)
